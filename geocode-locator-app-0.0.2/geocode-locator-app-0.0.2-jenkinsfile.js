@@ -8,7 +8,7 @@ pipeline {
      docker_tag = "exp-api-v0.0.2"
      deploymemt_yaml = "geocode-locator-app-0.0.2-deployment.yaml"
      service_yaml = "geocode-locator-app-0.0.2-service.yaml"
-     k8s_namespace = "exp-api-ns"
+     k8s_namespace = "experience-api-ns"
      k8s_app = "geocode-locator-app"
      config_map = "geocode-locator-app-config"
    }
