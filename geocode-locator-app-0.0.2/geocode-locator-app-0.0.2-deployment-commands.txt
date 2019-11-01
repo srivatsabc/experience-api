@@ -1,8 +1,8 @@
 ===============================================================================
 Build Code and Docker Container
 ===============================================================================
-docker build -t srivatsabc/geocode-locator-app:002 .
-docker push srivatsabc/geocode-locator-app:002
+docker build -t srivatsabc/geocode-locator-app:exp-api-v0.0.2 .
+docker push srivatsabc/geocode-locator-app:exp-api-v0.0.2
 
 ===============================================================================
 Remove images from local docker repo:
