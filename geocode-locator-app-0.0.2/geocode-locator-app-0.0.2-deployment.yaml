@@ -38,7 +38,7 @@ spec:
       # ----------------------------------
       containers:
         - name: geocode-locator-app-v2
-          image: srivatsabc/geocode-locator-app:002 #v 002 is for kubernetes cluster and v 001 is for dockerswarm. DB connection string changes
+          image: srivatsabc/geocode-locator-app:exp-api-v0.0.2 #v 002 is for kubernetes cluster and v 001 is for dockerswarm. DB connection string changes
           imagePullPolicy: Always
           ports:
             - containerPort: 8074
