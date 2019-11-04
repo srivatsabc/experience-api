@@ -6,16 +6,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: geocode-locator-app-v2
+  name: geocode-locator-app
 spec:
   selector:
       matchLabels:
-        app: geocode-locator-app-v2
+        app: geocode-locator-app
   replicas: 1
   template:
     metadata:
       labels:
-        app: geocode-locator-app-v2
+        app: geocode-locator-app
     spec:
       nodeSelector:
         kubernetes.io/experience-apis: allow
@@ -27,7 +27,7 @@ spec:
               - key: app
                 operator: In
                 values:
-                - geocode-locator-app-v2
+                - geocode-locator-app
             topologyKey: "kubernetes.io/hostname"
       # ----------------------------------
       # will target master node deployment
@@ -37,7 +37,7 @@ spec:
       #    effect: "NoSchedule"
       # ----------------------------------
       containers:
-        - name: geocode-locator-app-v2
+        - name: geocode-locator-app
           image: srivatsabc/geocode-locator-app:exp-api-v0.0.2 #v 002 is for kubernetes cluster and v 001 is for dockerswarm. DB connection string changes
           imagePullPolicy: Always
           ports:
